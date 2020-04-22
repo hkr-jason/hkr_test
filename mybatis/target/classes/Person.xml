@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Person">
+	
+    <select id="GetUserByID" parameterType="integer" resultType="person">
+        select * from `person` where id = #{id}
+    </select>
+    
+    <select id="GetUserByID" parameterType="integer" resultType="person" databaseId="oracle">
+        select * from person where id = #{id}
+    </select>
+	
+	<select id="FindAll"  resultType="person">
+		select * from person
+	</select>
+	
+</mapper>
